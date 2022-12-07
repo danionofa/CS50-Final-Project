@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Explore
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <h4 class="center">Suggested Hobbies</h4>
+        <br>
+        {% if not genres %}
+        <h5><a href ="/upload">Upload</a> your favorite movies and shows to view suggestions.</h5>
+        {% endif %}
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <!-- looping card display-->
+            {% for suggestion in suggestions %}
+              <div class="col">
+                <form action="/explore" method="post">
+                  <div class="card shadow-sm border border-0">
+                    <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{suggestion.image}}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{suggestion.name}}</h5>
+                        <p class="card-text">{{suggestion.overview}}</p>
+                        <button class="btn btn-primary" type="submit" name="add" value="{{suggestion.name}}">Add</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            {% endfor %}
+    </div>
+{% endblock %}

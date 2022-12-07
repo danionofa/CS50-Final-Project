@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <h4 class="center">My Hobbies</h4>
+        <br>
+        {% if not hobbies %}
+        <h5>Upload your favorite movies and shows in the <a href="/upload">upload</a> tab!</h5>
+        {% endif %}
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <!-- looping card display-->
+            {% for hobby in hobbies %}
+              <div class="col">
+                <form action="/home" method="post">
+                  <div class="card shadow-sm border border-0">
+                    <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{hobby.img}}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{hobby.name}}</h5>
+                        <p class="card-text">{{hobby.overview}}</p>
+                        <button class="btn btn-primary" type="submit" name="delete" value="{{hobby.name}}">Delete</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            {% endfor %}
+    </div>
+{% endblock %}

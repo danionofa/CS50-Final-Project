@@ -1,0 +1,113 @@
+body {
+    font-family: "Merriweather";
+    width: 100vw;
+    padding: 2rem;
+}
+
+.navbar {
+    padding-left: 1rem;
+}
+
+.container {
+    padding: 1rem;
+    width: 80%;
+}
+
+.center {
+    text-align: center;
+}
+
+.btn, .btn-primary {
+        font-size: 15px;
+        border: none;
+        background-color: #ffb6c1;
+        border-radius: 24px;
+        color: white;
+}
+
+#background {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+}
+
+.header {
+    font-size: 7em;
+    font-weight: 900;
+    color: black;
+    position: relative;
+    text-align: center;
+}
+
+#homepage {
+    background-color: #dfafdb;
+}
+
+.buttonsecondary {
+    background-color: black;
+    border: 2px solid black;
+}
+
+button {
+    background-color: #dfafdb;
+    border: 2px solid #dfafdb;
+    border-radius: 20px;
+    color: white;
+    height: 60px;
+    position: relative;
+    transition-duration: 0.5s;
+    width: 180px;
+}
+
+.imgcontainer {
+    border: 6px solid #fae8e0;
+    position: absolute;
+    bottom: 0;
+}
+
+.home {
+    width: 33%;
+}
+
+#none {
+    border-right: none;
+}
+
+#loginbody {
+    background-color: white;
+}
+
+#titlelog {
+    padding-top: 1rem;
+    color: #dfafdb;
+}
+
+#formbody h2 {
+    margin-bottom: 50px;
+}
+
+#formbody input {
+    left: 40%;
+    position: absolute;
+}
+
+#formbody #submit {
+    position: absolute;
+    left: 40%;
+}
+
+#formbody #cancel {
+    position: absolute;
+    left: 58%;
+    margin-bottom: 50px;
+}
+
+.textinput {
+    border: 1px solid #dfafdb;
+    border-radius: 15px;
+    clear: left;
+    height: 45px;
+    text-indent: 10px;
+    width: 30%;
+}

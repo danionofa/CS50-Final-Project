@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <link href="/../static/styles.css" rel="stylesheet">
+    <title>Registration Page</title>
+</head>
+<body id="loginbody">
+    {% for message in get_flashed_messages() %}
+    <h2>{{ message }}</h2>
+    {% endfor %}
+    <h1 id="titlelog">Register</h1>
+    <br><br>
+    <form action="/register" method="post">
+        <div id = "formbody">
+            <h2>Username<input type="text" class = "textinput" placeholder = "Enter Username" name="username"></input></h2>
+            <h2>Password<input type="password" class = "textinput" placeholder = "Enter Password" name="password"></input></h2>
+            <h2>Confirm Password<input type="password" class="textinput" placeholder="Confirm Password" name="confirmation"></input></h2>
+            <br>
+            <button id = "submit" type="submit">Register</button>
+            <button id="cancel" class = "buttonsecondary" formaction="/">Cancel</button>
+        </div>
+    </form>
+</body>
+</html>

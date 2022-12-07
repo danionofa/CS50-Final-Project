@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Upload
+{% endblock %}
+
+{% block main %}
+<br><br>
+<form action="/upload" method="post">
+    <div class="mb-3">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="symbol" name="hobby" placeholder="Enter Movie/Show Title" type="text">
+    </div>
+    <div class="mb-3">
+        <select class="form-select mx-auto w-auto" name="type">
+         <option disabled selected>Type</option>
+         <option value="movie" name="movie">Movie</option>
+         <option value="tv" name="tv">Show</option>
+        </select>
+     </div>
+    <button class="btn btn-primary" type="submit">Upload</button>
+</form>
+{% endblock %}
